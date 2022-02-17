@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    ".dart_tool": true,
+    ".idea": true,
+    ".gitignore": true,
+    ".metadata": true,
+    ".packages": true,
+    "CHANGELOG.md": true,
+    "LICENSE": true,
+    "pubspec.lock": true,
+    "README.md": true,
+    "task.iml": true
+  },
+  "editor.formatOnSave": true,
+  "editor.rulers": [100],
+  "dart.lineLength": 100
+}
