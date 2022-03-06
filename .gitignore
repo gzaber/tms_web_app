@@ -3,6 +3,8 @@
 /android/
 /ios/
 /windows/
+/web/
+
 # Miscellaneous
 *.class
 *.log

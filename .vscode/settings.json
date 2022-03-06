@@ -10,7 +10,6 @@
     "README.md": false,
     "android": true,
     "ios": true,
-    "web": true,
     "windows": true,
     "auth\\.dart_tool": true,
     "auth\\.idea": true,

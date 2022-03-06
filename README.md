@@ -1,19 +1,33 @@
 # tms_web_app - Task Management System frontend
 
-Frontend web application for TMS (Task Management System) backend.
-
-The project was written for a friendly company.  
-It is used to manage services of security systems and other installations at various facilities.
+A web application designed to manage tasks in an engineering company.  
+It is used to manage maintenance of security systems and other installations at various facilities.  
+It works with TMS backend server.
 
 ## Table of contents
 
-- [Screenshots](#screenshots)
 - [Features](#features)
+- [Screenshots](#screenshots)
 - [Technologies](#technologies)
 - [Setup](#setup)
-- [Test](#test)
 - [Launch](#launch)
+- [Test](#test)
 - [Insipiration](#inspiration)
+
+## Features
+
+- Authentication
+  - sign up
+  - sign in
+  - reset forgotten password
+- Sign up confirmation, reset password confirmation sending by e-mail
+- Role based authorization
+- Email management
+- User management
+- Task (service) management
+- Monthly schedule visualization
+- Field validation
+- Error display
 
 ## Screenshots
 
@@ -24,20 +38,6 @@ It is used to manage services of security systems and other installations at var
 [<img alt="Users screen" width="400px" src="_screenshots/tms_web_app_users.png" />](_screenshots/tms_web_app_users.png)
 [<img alt="Profile screen" width="400px" src="_screenshots/tms_web_app_profile.png" />](_screenshots/tms_web_app_profile.png)
 
-## Features
-
-- Viewing the monthly schedule
-- Authentication (register / login / reset forgotten password)
-- Confirmation of account registration and password reset via e-mail
-- Account registration only for allowed emails
-- Add / edit / delete allowed emails
-- Add / edit / delete users
-- Add / edit / delete tasks (services)
-- Full rights for administrators
-- Limited rights for users
-- Field validation
-- Error display
-
 ## Technologies
 
 - Dart
@@ -45,50 +45,84 @@ It is used to manage services of security systems and other installations at var
 
 ## Setup
 
-Clone this repository to your computer and run command `flutter pub get` to install all the packages.  
-Create `.env` file in the root of the project.
-Create `API_URL` variable with link to backend server.  
-If you run backend locally, set the following value:  
-`API_URL=http://localhost:3000/`
+Clone or download this repository.  
+Use the following command to install all the dependencies:
+
+```
+flutter pub get
+```
+
+Use the following command to update to the latest compatible versions of all the dependencies :
+
+```
+flutter pub upgrade
+```
+
+Use the following command to create platform-specific folders:
+
+```
+flutter create .
+```
+
+Create `.env` file in the project root directory with the following code:
+
+```
+API_URL=api_url
+```
+
+Replace `api_url` with backend server URL.  
+If backend server is running locally on port `3000`, set the following value:
+
+```
+API_URL=http://localhost:3000/
+```
+
+## Launch
+
+To start using the application it must be created collection named `emails` in MongoDB. In this collection it must be created a document with the following data:
+
+```
+email: "email"
+role: "admin"
+```
+
+Replace `email` with valid email address.
+
+Run the application using your IDE or using the following command:
+
+```
+flutter run -d chrome
+```
 
 ## Test
 
-To test `auth` and `task` packages, set connection string to backend and MongoDB in the following files:
+To test `auth` and `task` packages, set connection strings to backend server and MongoDB in the following files:
 
 ```
 auth/test/helpers.dart
 task/test/helpers.dart
 ```
 
-If you run backend locally, set the following value:  
-`const String API_URL = "http://localhost:3000/";`
-
-For database connection replace 'mongo_db_connection_string' with your MongoDB deployment connection string.  
-`const String MONGO_URL = "mongo_db_connection_string";`
-
-To run tests use Flutter documentation:  
-https://docs.flutter.dev/cookbook/testing/unit/introduction#6-run-the-tests
-
-## Launch
-
-You can run project in web browser using command line or your IDE options.  
-Use Flutter documentation:  
-https://docs.flutter.dev/get-started/web#create-and-run
-
-To start using the application you need to create collection `emails` in MongoDB. Then create document with the following data:
+If backend server is running locally on port `3000`, set the following value:
 
 ```
-email: "your_email"
-role: "admin"
+const String API_URL = "http://localhost:3000/";
 ```
 
-Replace 'your_email' with your valid email address.  
-Using provided email register in application, confirm registration, login and you can start using it.
+For database connection replace `mongo_db_connection_string` with your MongoDB deployment connection string.
+
+```
+const String MONGO_URL = "mongo_db_connection_string";
+```
+
+Run the tests using IDE or using the following command:
+
+```
+flutter test
+```
 
 ## Inspiration
 
-This project was based on tutorial:
-
-- Island Coder876  
-  _Full Stack Flutter Development_  
-  https://www.youtube.com/playlist?list=PLFhJomvoCKC-HHwfZzIy2Mv59Uen88rqB
+This project was based on Island Coder876 tutorial:  
+_Full Stack Flutter Development_  
+ https://www.youtube.com/playlist?list=PLFhJomvoCKC-HHwfZzIy2Mv59Uen88rqB
