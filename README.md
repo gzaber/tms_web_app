@@ -31,12 +31,12 @@ It works with TMS backend server.
 
 ## Screenshots
 
-[<img alt="Authorization screen" width="400px" src="_screenshots/tms_web_app_auth.png" />](_screenshots/tms_web_app_auth.png)
-[<img alt="Home screen" width="400px" src="_screenshots/tms_web_app_home.png" />](_screenshots/tms_web_app_home.png)
-[<img alt="Task status" width="400px" src="_screenshots/tms_web_app_task_info.png" />](_screenshots/tms_web_app_task_info.png)
-[<img alt="Tasks screen" width="400px" src="_screenshots/tms_web_app_tasks.png" />](_screenshots/tms_web_app_tasks.png)
-[<img alt="Users screen" width="400px" src="_screenshots/tms_web_app_users.png" />](_screenshots/tms_web_app_users.png)
-[<img alt="Profile screen" width="400px" src="_screenshots/tms_web_app_profile.png" />](_screenshots/tms_web_app_profile.png)
+[<img alt="Authorization screen" width="600px" src="_screenshots/tms_web_app_auth.png" />](_screenshots/tms_web_app_auth.png)
+[<img alt="Home screen" width="600px" src="_screenshots/tms_web_app_home.png" />](_screenshots/tms_web_app_home.png)
+[<img alt="Task status" width="600px" src="_screenshots/tms_web_app_task_info.png" />](_screenshots/tms_web_app_task_info.png)
+[<img alt="Tasks screen" width="600px" src="_screenshots/tms_web_app_tasks.png" />](_screenshots/tms_web_app_tasks.png)
+[<img alt="Users screen" width="600px" src="_screenshots/tms_web_app_users.png" />](_screenshots/tms_web_app_users.png)
+[<img alt="Profile screen" width="600px" src="_screenshots/tms_web_app_profile.png" />](_screenshots/tms_web_app_profile.png)
 
 ## Technologies
 
